@@ -4,6 +4,8 @@
 
 A small, dependency-light QuickBooks Online (QBO) REST v3 client built for unattended bookkeeping automation, plus a worked example that posts a full month-end reconciliation batch. The point of this repo is not "call an API" — it's the operating discipline around calling an API that moves real money records.
 
+**Impact:** a month-end reconciliation batch that meant about an hour of manual QuickBooks data entry posts and verifies in roughly two minutes, and re-runs are safe by construction.
+
 ## What it does
 
 - `qbo_client.py` — the client. OAuth2 refresh-token lifecycle, retry/backoff, structured logging with Intuit's `intuit_tid` trace IDs, and `create_and_verify()` / `update_and_verify()` primitives that read every write back before reporting success.
